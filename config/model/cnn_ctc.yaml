@@ -1,0 +1,9 @@
+# @package _global_
+module:
+  _target_: emg2qwerty.lightning.CNNCTCModule
+  conv_channels: [64, 128, 128]
+
+datamodule:
+  _target_: emg2qwerty.lightning.WindowedEMGDataModule
+  window_length: 8000
+  padding: [1800, 200]
